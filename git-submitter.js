@@ -2,10 +2,9 @@
 
 var cp = require('child_process');
 var inquirer = require('inquirer');
+var branchName = require('current-git-branch');
 
 var spawnSync = cp.spawnSync;
-
-// spawnSync('git', ['add', '.']);
 
 var commitMessageOption = require('./commit-message-option');
 
@@ -16,5 +15,13 @@ inquirer
       'commit',
       '-am',
       answers.message
-    ]);
+    ], { stdio: 'inherit' });
+
+    if (answers.push) {
+      spawnSync('git', [
+        'push',
+        'origin',
+        branchName(),
+      ], { stdio: 'inherit' });
+    }
   });

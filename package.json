@@ -9,6 +9,7 @@
   "author": "zeroling",
   "license": "MIT",
   "dependencies": {
+    "current-git-branch": "^1.0.1",
     "inquirer": "^6.0.0"
   }
 }
