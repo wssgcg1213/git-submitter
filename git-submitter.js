@@ -5,7 +5,7 @@ var inquirer = require('inquirer');
 
 var spawnSync = cp.spawnSync;
 
-spawnSync('git', ['add', '.']);
+// spawnSync('git', ['add', '.']);
 
 var commitMessageOption = require('./commit-message-option');
 
