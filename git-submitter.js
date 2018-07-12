@@ -8,6 +8,10 @@ var colors = require('colors');
 var spawnSync = cp.spawnSync;
 
 var commitMessageOption = require('./commit-message-option');
+spawnSync('git', [
+  'add',
+  '.',
+], { stdio: 'inherit' });
 
 inquirer
   .prompt(commitMessageOption)
