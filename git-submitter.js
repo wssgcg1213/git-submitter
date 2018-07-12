@@ -3,6 +3,7 @@
 var cp = require('child_process');
 var inquirer = require('inquirer');
 var branchName = require('current-git-branch');
+var colors = require('colors');
 
 var spawnSync = cp.spawnSync;
 
@@ -16,6 +17,7 @@ inquirer
       '-am',
       answers.message
     ], { stdio: 'inherit' });
+    console.log(colors.green('\nSuccessfully Commited!'));
 
     if (answers.push) {
       spawnSync('git', [
@@ -23,5 +25,6 @@ inquirer
         'origin',
         branchName(),
       ], { stdio: 'inherit' });
+      console.log(colors.green('\nSuccessfully Updated!'));
     }
   });
