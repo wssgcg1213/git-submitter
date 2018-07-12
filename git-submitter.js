@@ -17,14 +17,15 @@ inquirer
       '-am',
       answers.message
     ], { stdio: 'inherit' });
-    console.log(colors.green('\nSuccessfully Commited!'));
+    console.log(colors.green('Successfully Commited!'));
 
     if (answers.push) {
+      console.log('');
       spawnSync('git', [
         'push',
         'origin',
         branchName(),
       ], { stdio: 'inherit' });
-      console.log(colors.green('\nSuccessfully Updated!'));
+      console.log(colors.green('Successfully Updated!'));
     }
   });
