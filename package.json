@@ -1,0 +1,13 @@
+{
+  "name": "git-submitter",
+  "version": "0.1.0",
+  "description": "Help you git submit faster~~",
+  "bin": {
+    "gsm": "git-submitter.js"
+  },
+  "engine": {
+    "node": ">8.0"
+  },
+  "author": "zeroling",
+  "license": "MIT"
+}
