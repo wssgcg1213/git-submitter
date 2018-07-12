@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "description": "Help you git submit faster~~",
   "bin": {
-    "gsm": "git-submitter.js"
+    "gsm": "./git-submitter.js"
   },
-  "engine": {
-    "node": ">8.0"
-  },
+  "main": "git-submitter.js",
   "author": "zeroling",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^6.0.0"
+  }
 }
